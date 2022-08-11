@@ -1,0 +1,54 @@
+# Create User
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+	"name" : "Bunga ",
+	"email" : "bunga@gmail.com",
+	"password": "password",
+	"confirmPassword": "password",
+	"role": "user"
+}
+
+###
+// Get All Users
+GET http://localhost:5000/users
+
+###
+// Get Single Users
+GET http://localhost:5000/users/a0a981ae-9125-470a-b905-25c6b9e3c849
+
+###
+// Update User
+PATCH http://localhost:5000/users/e73b2272-b0ae-48bb-a74d-e672dd5092fa
+Content-Type: application/json
+
+{
+	"name" : "Bunga Kurnia ",
+	"email" : "bunga@gmail.com",
+	"password": "",
+	"confirmPassword": "",
+	"role": "user"
+}
+
+###
+//Delete User
+DELETE  http://localhost:5000/users/e73b2272-b0ae-48bb-a74d-e672dd5092fa
+
+###
+//Login user
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+	"email" : "admin@gmail.com",
+	"password": "password"
+}
+
+###
+//Me 
+GET http://localhost:5000/me
+
+###
+// Logout User
+DELETE  http://localhost:5000/Logout
